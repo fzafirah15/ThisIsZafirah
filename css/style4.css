@@ -1,0 +1,47 @@
+/* Susunan Asas */
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  
+}
+h1
+{
+    color: brown;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 50px;
+  gap: 40px; /* Jarak antara teks dan gambar */
+}
+
+/* Teknik untuk memusingkan kedudukan (Zig-Zag) */
+.row.reverse {
+  flex-direction: row-reverse;
+}
+
+.text-content {
+  flex: 1;
+}
+
+.image-content {
+  flex: 1;
+}
+
+.image-content img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  display: block;
+}
+
+/* Responsif: Bila buka di telefon, gambar akan duduk di atas teks */
+@media (max-width: 768px) {
+  .row, .row.reverse {
+    flex-direction: column-reverse; /* Gambar di atas, teks di bawah */
+    text-align: center;
+  }
